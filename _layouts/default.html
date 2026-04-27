@@ -2,143 +2,44 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8" />
-    {% seo %}
-
-    <!-- VerifyBot favicon -->
-    <link rel="icon" type="image/png" href="{{ '/assets/images/verify-bot.png' | relative_url }}">
-    <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/verify-bot.png' | relative_url }}">
-    <link rel="apple-touch-icon" href="{{ '/assets/images/verify-bot.png' | relative_url }}">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="{{ site.theme_color | default: '#4E8ED8' }}" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
+    <title>{{ page.title | default: site.title | default: site.github.repository_name }}</title>
+    {% assign brand_image = site.icon | default: site.logo %}
+    {% assign favicon_image = site.favicon | default: brand_image %}
+    {% if favicon_image %}
+      <link rel="icon" href="{{ favicon_image | relative_url }}" type="image/x-icon" />
+      <link rel="shortcut icon" href="{{ favicon_image | relative_url }}" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="{{ favicon_image | relative_url }}" />
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" />
-    {% include head-custom.html %}
-
-    <style>
-      :root{
-        --verify: {{ site.theme_color | default: '#4E8ED8' }};
-        --verifyHover: #6aa7ee;
-        --border: rgba(255,255,255,.10);
-      }
-
-      .wrap { max-width: 980px; margin: 0 auto; padding: 0 1rem; }
-      .page-header { text-align: center; padding: 2.2rem 0 1.6rem; }
-      .brand { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; }
-      .brand img { width:56px; height:56px; border-radius:14px; object-fit:cover; box-shadow:0 10px 25px rgba(0,0,0,.18); }
-      .brand-copy { display:flex; flex-direction:column; align-items:center; gap:8px; }
-
-      .project-name {
-        margin: 0;
-      }
-
-      .project-tagline {
-        margin: 14px auto 0;
-        max-width: 760px;
-        font-size: 0.98rem;
-        line-height: 1.55;
-        opacity: .88;
-      }
-
-      .cta {
-        margin-top: 14px;
-        display:flex;
-        gap:10px;
-        justify-content:center;
-        flex-wrap:wrap;
-        align-items:center;
-      }
-
-      .btn { border-radius: 10px; padding: 10px 14px; font-weight: 800; }
-      .btn.primary { background: var(--verify); color: #071018; border: 1px solid rgba(255,255,255,.14); }
-      .btn.primary:hover { background: var(--verifyHover); }
-      .btn.secondary { background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.16); color: #fff; }
-      .btn.secondary:hover { background: rgba(255,255,255,.16); }
-
-      .bot-switcher {
-        position: relative;
-        display: inline-block;
-      }
-
-      .bot-switcher-btn {
-        cursor: default;
-      }
-
-      .bot-menu {
-        position: absolute;
-        top: calc(100% + 8px);
-        left: 50%;
-        transform: translateX(-50%);
-        min-width: 210px;
-        background: #101722;
-        border: 1px solid rgba(255,255,255,.12);
-        border-radius: 12px;
-        box-shadow: 0 12px 30px rgba(0,0,0,.28);
-        padding: 8px;
-        z-index: 50;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity 0.18s ease, transform 0.18s ease;
-      }
-
-      .bot-switcher:hover .bot-menu,
-      .bot-switcher:focus-within .bot-menu {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: translateX(-50%) translateY(0);
-      }
-
-      .bot-menu a {
-        display: block;
-        padding: 10px 12px;
-        border-radius: 8px;
-        text-decoration: none;
-        color: #fff;
-        font-weight: 700;
-      }
-
-      .bot-menu a:hover {
-        background: rgba(255,255,255,.08);
-      }
-
-      .main-content { max-width: 980px; margin: 0 auto; padding: 0 1rem; }
-
-      .site-footer { max-width: 980px; margin: 0 auto; padding: 26px 1rem 40px; color: rgba(255,255,255,.55); font-size: 0.95rem; }
-      .site-footer a { color: inherit; text-decoration: underline; }
-      .footer-row { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center; }
-      .badge { display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; background: rgba(255,255,255,.07); border:1px solid var(--border); color:#fff; font-size:.9rem; }
-      .muted { opacity:.75; }
-    </style>
   </head>
-
   <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+    <a id="skip-to-content" href="#content">Skip to content</a>
 
     <header class="page-header" role="banner">
       <div class="wrap">
         <div class="brand">
-          {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="{{ site.title | default: site.github.repository_name }} logo" />
+          {% if brand_image %}
+            <img src="{{ brand_image | relative_url }}" alt="{{ site.title | default: site.github.repository_name }} logo" />
           {% endif %}
 
           <div class="brand-copy">
             <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
 
             <div class="cta">
-              <a href="{{ '/index.html' | relative_url }}" class="btn secondary">Home</a>
+              <a href="{{ '/' | relative_url }}" class="btn secondary">Home</a>
 
               <div class="bot-switcher">
                 <button type="button" class="btn secondary bot-switcher-btn">Our Bots ▼</button>
                 <div class="bot-menu">
+                  <a href="https://afteryparty.github.io/afterparty-groovy-music/">Afterparty Groovy Music</a>
                   <a href="https://afteryparty.github.io/guardian-link-docs/">Guardian Link</a>
+                  <a href="https://help.botversa.xyz">Versa</a>
                   <a href="https://afteryparty.github.io/voice-maestro-docs/">VoiceMaestro</a>
+                  <a href="https://afteryparty.github.io/lofi-vibes/">Lofi Vibes</a>
                   <a href="https://afteryparty.github.io/Verify-Bot-docs/">VerifyBot</a>
+                  <a href="https://afteryparty.github.io/kitsubot-docs/">KitsuBot</a>
                 </div>
               </div>
 
@@ -151,8 +52,8 @@
               {% if site.cta_website_url %}
                 <a href="{{ site.cta_website_url }}" class="btn secondary">Website</a>
               {% endif %}
-              {% if site.github.is_project_page %}
-                <a href="{{ site.github.repository_url }}" class="btn secondary">GitHub</a>
+              {% if site.cta_github_url %}
+                <a href="{{ site.cta_github_url }}" class="btn secondary">GitHub</a>
               {% endif %}
             </div>
 
@@ -171,7 +72,7 @@
         <div class="badge">Powered by <strong>{{ site.footer_brand | default: "Afterparty Bot Labs" }}</strong></div>
         <div class="muted">
           © {{ site.time | date: "%Y" }} {{ site.footer_brand | default: "Afterparty Bot Labs" }}
-          — <a href="{{ site.footer_link | default: "https://afterpartylabs.xyz" }}">Website</a>
+          - <a href="{{ site.footer_link | default: "https://afterpartylabs.xyz" }}">Website</a>
         </div>
       </div>
     </footer>
