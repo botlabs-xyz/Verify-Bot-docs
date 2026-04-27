@@ -4,24 +4,88 @@
 @import "jekyll-theme-midnight";
 
 :root {
-  --verify: #4E8ED8;
-  --verifyHover: #6aa7ee;
+  --accent: {{ site.theme_color | default: '#4E8ED8' }};
+  --accent-soft: color-mix(in srgb, var(--accent) 78%, white);
   --panel: rgba(255,255,255,.06);
   --border: rgba(255,255,255,.10);
 }
 
-/* Global */
-body { background: #0b0c10; }
-.main-content { max-width: 980px; margin: 0 auto; padding: 0 1rem; }
+body {
+  background:
+    radial-gradient(circle at top, color-mix(in srgb, var(--accent) 28%, transparent), transparent 34%),
+    linear-gradient(180deg, #0d1016 0%, #090b10 48%, #06070b 100%);
+}
 
-/* Links */
-a { color: var(--verify); text-decoration: none; }
-a:hover { color: var(--verifyHover); text-decoration: underline; }
+a {
+  color: var(--accent-soft);
+  text-decoration: none;
+}
 
-/* Headings */
-h1, h2, h3 { color: #fff; }
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
 
-/* Buttons */
+h1, h2, h3 {
+  color: #fff;
+}
+
+.wrap,
+.main-content,
+.site-footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-header {
+  text-align: center;
+  padding: 2.4rem 0 1.8rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand img {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,.18);
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-name {
+  margin: 0;
+}
+
+.project-tagline {
+  margin: 12px auto 0;
+  max-width: 760px;
+  font-size: .98rem;
+  line-height: 1.6;
+  opacity: .88;
+}
+
+.cta {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .btn {
   border-radius: 10px;
   padding: 10px 14px;
@@ -29,13 +93,15 @@ h1, h2, h3 { color: #fff; }
 }
 
 .btn.primary {
-  background: var(--verify);
+  background: var(--accent);
   color: #071018;
   border: 1px solid rgba(255,255,255,.14);
 }
 
 .btn.primary:hover {
-  background: var(--verifyHover);
+  background: var(--accent-soft);
+  color: #071018;
+  text-decoration: none;
 }
 
 .btn.secondary {
@@ -46,9 +112,9 @@ h1, h2, h3 { color: #fff; }
 
 .btn.secondary:hover {
   background: rgba(255,255,255,.16);
+  text-decoration: none;
 }
 
-/* Bot switcher */
 .bot-switcher {
   position: relative;
   display: inline-block;
@@ -63,7 +129,7 @@ h1, h2, h3 { color: #fff; }
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  min-width: 210px;
+  min-width: 230px;
   background: #101722;
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 12px;
@@ -73,7 +139,7 @@ h1, h2, h3 { color: #fff; }
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.18s ease, transform 0.18s ease;
+  transition: opacity .18s ease, transform .18s ease;
 }
 
 .bot-switcher:hover .bot-menu,
@@ -88,7 +154,6 @@ h1, h2, h3 { color: #fff; }
   display: block;
   padding: 10px 12px;
   border-radius: 8px;
-  text-decoration: none;
   color: #fff;
   font-weight: 700;
 }
@@ -98,16 +163,64 @@ h1, h2, h3 { color: #fff; }
   text-decoration: none;
 }
 
-/* Content cards */
-.card {
+.site-footer {
+  padding: 26px 1rem 40px;
+  color: rgba(255,255,255,.55);
+  font-size: .95rem;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid var(--border);
+  color: #fff;
+  font-size: .9rem;
+}
+
+.muted {
+  opacity: .75;
+}
+
+.doc-card,
+.faq-card {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 14px 16px;
+  padding: 16px 18px;
+  margin: 14px 0;
 }
 
-/* Code */
-pre, code {
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 16px 0 20px;
+}
+
+pre,
+code {
   background: rgba(0,0,0,.35);
   border-radius: 10px;
+}
+
+pre {
+  padding: 12px 14px;
+  overflow-x: auto;
 }
