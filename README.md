@@ -1,4 +1,4 @@
-# VerifyBot
+﻿# VerifyBot
 
 Verification and trust tooling for Discord communities.
 
@@ -7,46 +7,23 @@ Verification and trust tooling for Discord communities.
 [![Support](https://img.shields.io/badge/Support-Discord-4E8ED8?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BusuZp2G8w)
 [![Website](https://img.shields.io/badge/Website-Afterparty%20Bot%20Labs-4E8ED8?style=for-the-badge)](https://afterpartylabs.xyz)
 
----
+VerifyBot helps Discord servers manage verification workflows and trust checks with logging and moderation support.
 
-VerifyBot helps Discord servers manage **verification workflows and trust systems**.
+## Documentation
 
----
+- Live docs: <https://afteryparty.github.io/Verify-Bot-docs/>
+- Start here: `setup.md` and `commands.md`
 
-# ✨ Features
+## Project Notice
 
-- Manual verification tools
-- Reaction-based verification systems
-- Verification logging (channel or webhook)
-- Cross-server verification checks
-- Moderation utilities for verified users
-- Admin diagnostic commands
+- This bot is private
+- Forks and PRs are not accepted
+- Self-hosting is not supported
 
----
+## TODO (Public Links)
 
-# 📚 Documentation
-
-Full documentation:
-
-👉 https://afteryparty.github.io/Verify-Bot-docs/
-
----
-
-# 🚀 Quick Start
-
-1. Invite the bot to your server  
-2. Configure logging  
-3. Enable verification roles  
-
----
-
-# 🏢 Project
-
-VerifyBot is developed by **Afterparty Bot Labs**.
-
-Website  
-https://afterpartylabs.xyz
-
----
+- GitHub repository link is not published in current official README links.
+- Public dashboard link is not published in current official README links.
+- Top.gg link is not published in current official README links.
 
 Powered by **Afterparty Bot Labs © 2026**
