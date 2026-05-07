@@ -33,7 +33,7 @@ a {
 }
 
 a:hover {
-  color: #ffffff;
+  color: #a9d2fb;
   text-decoration: underline;
 }
 
@@ -172,9 +172,10 @@ h4 {
 .doc-card,
 .faq-card {
   background: var(--card);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(78, 142, 216, 0.26);
   border-radius: 14px;
   padding: 0.95rem 1rem;
+  box-shadow: 0 10px 24px rgba(78, 142, 216, 0.08);
 }
 
 .doc-card h3,
@@ -271,8 +272,12 @@ hr {
   align-items: center;
   padding: 0.35rem 0.62rem;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--card);
+  border: 1px solid rgba(78, 142, 216, 0.4);
+  background: rgba(78, 142, 216, 0.14);
+}
+
+.powered-by {
+  gap: 0.35rem;
 }
 
 .site-footer a {

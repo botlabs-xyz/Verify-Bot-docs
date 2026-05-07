@@ -51,7 +51,10 @@
 
     <footer class="site-footer" role="contentinfo">
       <div class="footer-row">
-        <div class="badge">Powered by <strong>{{ site.footer_brand }}</strong></div>
+        <div class="badge powered-by">
+          <span>Powered by</span>
+          <strong>{{ site.footer_brand }}</strong>
+        </div>
         <div class="muted">
           © {{ site.time | date: '%Y' }} {{ site.footer_brand }} · <a href="{{ site.footer_link }}" target="_blank" rel="noopener noreferrer">Website</a>
         </div>
