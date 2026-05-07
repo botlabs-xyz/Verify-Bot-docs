@@ -11,6 +11,7 @@ cta_docs_url: "/"
 cta_invite_url: "https://discord.com/api/oauth2/authorize?client_id=1325944440778657873&permissions=8&scope=applications.commands+bot"
 cta_support_url: "https://discord.gg/BusuZp2G8w"
 cta_website_url: "https://afterpartylabs.xyz"
-url: "https://afteryparty.github.io"
+url: "https://botlabs-xyz.github.io"
 baseurl: "/Verify-Bot-docs"
 markdown: kramdown
+
