@@ -37,6 +37,9 @@
             </nav>
             <div class="cta">
               <a href="{{ site.cta_invite_url }}" class="btn primary" target="_blank" rel="noopener noreferrer">Invite</a>
+              {% if site.topgg_url %}
+                <a href="{{ site.topgg_url }}" class="btn secondary" target="_blank" rel="noopener noreferrer">Vote</a>
+              {% endif %}
               <a href="{{ site.cta_support_url }}" class="btn secondary" target="_blank" rel="noopener noreferrer">Support</a>
               <a href="{{ site.cta_website_url }}" class="btn secondary" target="_blank" rel="noopener noreferrer">Website</a>
             </div>
