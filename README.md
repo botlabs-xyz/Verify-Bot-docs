@@ -4,7 +4,6 @@ Verification and trust tooling for Discord communities.
 
 [![Docs](https://img.shields.io/badge/Docs-4E8ED8?style=for-the-badge)](https://botlabs-xyz.github.io/Verify-Bot-docs/)
 [![Invite](https://img.shields.io/badge/Invite-4E8ED8?style=for-the-badge)](https://discord.com/api/oauth2/authorize?client_id=1325944440778657873&permissions=8&scope=applications.commands+bot)
-[![Vote](https://img.shields.io/badge/Vote-4E8ED8?style=for-the-badge)](https://top.gg/bot/1325944440778657873/vote)
 [![Support](https://img.shields.io/badge/Support-4E8ED8?style=for-the-badge)](https://discord.gg/BusuZp2G8w)
 [![Website](https://img.shields.io/badge/Website-4E8ED8?style=for-the-badge)](https://afterpartylabs.xyz)
 
