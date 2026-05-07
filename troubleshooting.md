@@ -7,45 +7,69 @@ permalink: /troubleshooting/
 
 ## Troubleshooting
 
-### Slash commands not showing
+### Slash commands are not showing
 
-Checks:
-1. Confirm bot has `Use Application Commands`.
-2. Wait for Discord command propagation after invite/update.
-3. Re-invite with correct scopes (`bot` + `applications.commands`).
+Try these checks:
 
-### Bot cannot assign roles
+1. Open **Server Settings → Integrations → VerifyBot** and confirm the app is installed.
+2. Open **Server Settings → Roles → VerifyBot** and make sure command-related permissions are enabled.
+3. If you just invited VerifyBot, wait a few minutes and check again. Discord sometimes needs a short delay before new commands appear.
+4. If commands still do not appear, re-invite VerifyBot using the official invite link from this docs repo.
 
-Checks:
-1. Bot has `Manage Roles`.
-2. Target verification role is below bot role.
-3. Role is allowlisted via `/addverifyrole`.
+### VerifyBot cannot assign roles
 
-### Verification message not working
+Try these checks:
 
-Checks:
-1. Verify channel permissions (`View`, `Send`, `Embed Links`).
-2. Confirm `/setreactionverify` targets correct channel/role/emoji.
-3. Recreate verification message after role or emoji changes.
+1. Open **Server Settings → Roles**.
+2. Drag the **VerifyBot** role above the role you want VerifyBot to give (for example, `Verified`).
+3. In the VerifyBot role permissions, make sure **Manage Roles** is enabled.
+4. Confirm the target role has been allowed in VerifyBot with `/addverifyrole`.
 
-### Logs not posting
+Plain-English note: Discord only lets a bot assign roles that are below the bot's own role in the role list.
 
-Checks:
-1. Confirm `/setlogs` is configured.
-2. Confirm bot can post in log channel.
-3. If using webhooks, verify webhook URL and permissions.
+### Verification message is not working
 
-### Role hierarchy problems
+Try these checks:
 
-Symptoms:
-- Verification command runs but role is not applied.
+1. Open the verify channel, then click **Edit Channel → Permissions**.
+2. Make sure VerifyBot can:
+   - View Channel
+   - Send Messages
+   - Embed Links
+3. Run `/setreactionverify` again and double-check channel, role, and emoji choices.
+4. If you recently changed emoji/role settings, create a fresh verification message.
+
+### Logs are not posting
+
+Try these checks:
+
+1. Run `/setlogs` again and select the correct log channel.
+2. Open the log channel → **Edit Channel → Permissions** and confirm VerifyBot can send messages there.
+3. If you use webhook-based logs, make sure that log destination is still active.
+
+Plain-English note: A webhook is just another way Discord can deliver bot messages to a channel.
+
+### Role order problems
+
+Common sign:
+- A verify command says success, but no role appears on the member.
 
 Fix:
-1. Move VerifyBot role above the verification role.
-2. Re-test with `/verify`.
-3. Audit all role ordering in server settings.
 
-## Still Stuck?
+1. Open **Server Settings → Roles**.
+2. Move the **VerifyBot** role higher than your verification roles.
+3. Test again with `/verify` on a test member.
 
-- Support server: <https://discord.gg/BusuZp2G8w>
-- Include: command used, expected result, actual result, and screenshots of role order + channel permissions.
+Plain-English note: You may hear this called "role hierarchy". It simply means the top-to-bottom role order in **Server Settings → Roles**.
+
+## What to send support
+
+If you still need help, share this in support:
+
+- server name
+- command used
+- what you expected
+- what happened instead
+- screenshot of roles or permissions if relevant
+
+Support server: <https://discord.gg/BusuZp2G8w>
