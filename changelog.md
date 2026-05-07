@@ -5,6 +5,8 @@ description: Documentation release notes for VerifyBot docs.
 permalink: /changelog/
 ---
 
+> Internal/developer-facing notes for docs maintenance. Not intended as a primary public user page.
+
 ## Changelog
 
 ### 2026-05-07
@@ -15,9 +17,3 @@ permalink: /changelog/
 - Added first-time owner setup guide and role hierarchy validation steps.
 - Updated shared layout/navigation/footer and unified purple-accent visual theme.
 - Confirmed links use `relative_url` for project-site compatibility.
-
-## TODO
-
-- Add public GitHub repository URL if/when it is published in official project links.
-- Add dashboard link if a public dashboard is introduced.
-- Add dedicated public privacy/terms endpoints if they move outside docs pages.

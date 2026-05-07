@@ -2,8 +2,8 @@
 
 Verification and trust tooling for Discord communities.
 
-[![Documentation](https://img.shields.io/badge/Documentation-Docs-4E8ED8?style=for-the-badge)](https://botlabs-xyz.github.io/Verify-Bot-docs/)
-[![Add Bot](https://img.shields.io/badge/Add%20Bot-Invite-4E8ED8?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/api/oauth2/authorize?client_id=1325944440778657873&permissions=8&scope=applications.commands+bot)
+[![Docs](https://img.shields.io/badge/Docs-View%20Guide-4E8ED8?style=for-the-badge)](https://botlabs-xyz.github.io/Verify-Bot-docs/)
+[![Invite](https://img.shields.io/badge/Invite-Add%20Bot-4E8ED8?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/api/oauth2/authorize?client_id=1325944440778657873&permissions=8&scope=applications.commands+bot)
 [![Vote](https://img.shields.io/badge/Vote-Top.gg-4E8ED8?style=for-the-badge&logo=topdotgg&logoColor=white)](https://top.gg/bot/1325944440778657873/vote)
 [![Support](https://img.shields.io/badge/Support-Discord-4E8ED8?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BusuZp2G8w)
 [![Website](https://img.shields.io/badge/Website-Afterparty%20Bot%20Labs-4E8ED8?style=for-the-badge)](https://afterpartylabs.xyz)
@@ -24,7 +24,6 @@ This repository is the **public documentation repo** for VerifyBot. It is not th
 - FAQ
 - Privacy
 - Terms
-- Changelog
 
 ## Project Notice
 
