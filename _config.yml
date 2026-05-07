@@ -1,7 +1,7 @@
 ﻿title: "VerifyBot"
 description: "Official documentation for VerifyBot by Afterparty Bot Labs"
 show_downloads: false
-theme_color: "#9933FF"
+theme_color: "#4E8ED8"
 footer_brand: "Afterparty Bot Labs"
 footer_link: "https://afterpartylabs.xyz"
 logo: "/assets/images/verify-bot.png"
@@ -14,4 +14,5 @@ cta_website_url: "https://afterpartylabs.xyz"
 url: "https://botlabs-xyz.github.io"
 baseurl: "/Verify-Bot-docs"
 markdown: kramdown
+
 
