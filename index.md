@@ -36,10 +36,12 @@ VerifyBot helps server staff run reliable verification workflows with clear logs
 
 ## Real Project Links
 
-- Docs: <https://afteryparty.github.io/Verify-Bot-docs/>
-- Invite: <https://discord.com/api/oauth2/authorize?client_id=1325944440778657873&permissions=8&scope=applications.commands+bot>
-- Support: <https://discord.gg/BusuZp2G8w>
-- Website: <https://afterpartylabs.xyz>
+<div class="cta">
+  <a class="btn primary" href="{{ site.cta_invite_url }}" target="_blank" rel="noopener noreferrer">Invite VerifyBot</a>
+  <a class="btn secondary" href="{{ site.topgg_url }}" target="_blank" rel="noopener noreferrer">Vote on Top.gg</a>
+  <a class="btn secondary" href="{{ site.cta_support_url }}" target="_blank" rel="noopener noreferrer">Support Server</a>
+  <a class="btn secondary" href="{{ site.cta_website_url }}" target="_blank" rel="noopener noreferrer">Afterparty Bot Labs</a>
+</div>
 
 ## Next Steps
 
