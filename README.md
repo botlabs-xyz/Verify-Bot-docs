@@ -32,9 +32,4 @@ This repository is the **public documentation repo** for VerifyBot. It is not th
 - Forks and PRs are not accepted
 - Self-hosting is not supported
 
-## TODO (Public Links)
-
-- GitHub repository link is not published in current official README links.
-- Public dashboard link is not published in current official README links.
-
 Powered by **Afterparty Bot Labs © 2026**
