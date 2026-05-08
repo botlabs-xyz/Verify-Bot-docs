@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: VerifyBot
 description: Verification and trust tooling for Discord communities.
@@ -11,18 +11,18 @@ VerifyBot helps server staff run reliable verification workflows with clear logs
 <div class="doc-grid">
   <div class="doc-card">
     <h3>Start Here</h3>
-    <p>New server owner? Begin with the setup guide.</p>
+    <p>New server owner? Begin with the setup guide and verify your first role flow.</p>
     <p><a href="{{ '/setup/' | relative_url }}">Open Setup Guide</a></p>
   </div>
   <div class="doc-card">
-    <h3>Command Reference</h3>
-    <p>See verification, moderation, and settings commands in table format.</p>
+    <h3>Commands</h3>
+    <p>See verification, moderation, and settings commands in clean table format.</p>
     <p><a href="{{ '/commands/' | relative_url }}">Open Commands</a></p>
   </div>
   <div class="doc-card">
-    <h3>Permission Checks</h3>
-    <p>Understand what Discord permissions are required and why.</p>
-    <p><a href="{{ '/permissions/' | relative_url }}">Open Permissions</a></p>
+    <h3>Troubleshooting</h3>
+    <p>Fix setup, role, logging, and command issues with beginner-friendly checks.</p>
+    <p><a href="{{ '/troubleshooting/' | relative_url }}">Open Troubleshooting</a></p>
   </div>
 </div>
 
@@ -34,7 +34,7 @@ VerifyBot helps server staff run reliable verification workflows with clear logs
 - Logging via channel or webhook (`/setlogs`)
 - Cross-server trust checks for moderation workflows
 
-## Real Project Links
+## Project Links
 
 <div class="cta">
   <a class="btn primary" href="{{ site.cta_invite_url }}" target="_blank" rel="noopener noreferrer">Invite VerifyBot</a>
@@ -45,6 +45,6 @@ VerifyBot helps server staff run reliable verification workflows with clear logs
 
 ## Next Steps
 
-1. Follow [Setup]({{ '/setup/' | relative_url }}).
-2. Review [Permissions]({{ '/permissions/' | relative_url }}).
-3. Test a live workflow with [Troubleshooting]({{ '/troubleshooting/' | relative_url }}) open.
+- Follow [Setup]({{ '/setup/' | relative_url }}).
+- Review [Permissions]({{ '/permissions/' | relative_url }}).
+- Test a live workflow with [Troubleshooting]({{ '/troubleshooting/' | relative_url }}) open.
